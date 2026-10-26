@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "careerflow-independent",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-10-26",
+  "workers_dev": true,
+  "assets": {"directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"]},
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "careerflow-db",
+    "database_id": "00000000-0000-0000-0000-000000000000",
+    "migrations_dir": "migrations"
+  }],
+  "triggers": {"crons": ["*/15 * * * *"]},
+  "vars": {"SEARCH_ENABLED": "0", "DAILY_SEARCH_BUDGET": "300"},
+  "observability": {"enabled": true}
+}

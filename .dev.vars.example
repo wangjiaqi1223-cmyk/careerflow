@@ -1,0 +1,4 @@
+# Local development only. Never commit a real key.
+BRAVE_SEARCH_API_KEY=replace_with_your_api_key
+# Set only after using a plan that permits storing search results.
+SEARCH_ENABLED=0
